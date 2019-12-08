@@ -1,5 +1,6 @@
 {
   "name": "news-analyzer",
+  "homepage": "https://github.com/dontstain/news-analyzer#readme",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -18,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/dontstain/news-analyzer/issues"
   },
-  "homepage": "https://github.com/dontstain/news-analyzer#readme",
   "devDependencies": {
     "@babel/cli": "7.7.5",
     "@babel/core": "7.7.5",

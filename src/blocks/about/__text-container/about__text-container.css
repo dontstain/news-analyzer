@@ -1,0 +1,6 @@
+.about__text-container {
+  margin-top: calc(100vw / 28);
+  transform: translate(0, calc((100vw - 1440px) / 32));
+  width: calc(100vw / 1.81);
+  max-width: 600px;
+}

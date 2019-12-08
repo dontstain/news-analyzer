@@ -1,0 +1,17 @@
+@import url(./__nav-item/header__nav-item.css);
+@import url(./__nav-text/header__nav-text.css);
+@import url(./__nav/header__nav.css);
+@import url(./__title/header__title.css);
+@import url(./_light/header_light.css);
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  height: calc(100vw / 36 + 40px) ;
+  max-height: 80px;
+  background-color: transparent;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  color: white;
+  z-index: 2;
+} 

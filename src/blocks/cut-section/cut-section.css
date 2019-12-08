@@ -1,0 +1,4 @@
+.cut-section {
+  width: calc(100% - 2*(100% / 13.85));
+  padding: 0 calc(100% / 13.85);  
+}

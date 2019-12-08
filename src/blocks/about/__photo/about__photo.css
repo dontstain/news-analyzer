@@ -1,0 +1,16 @@
+.about__photo {
+  margin-right: calc(100vw / 30 + 8px);
+  width: calc(100vw / 3.1);
+  max-width: 464px;
+  height: calc(100vw / 3.1);
+  max-height: 464px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about__photo {
+    max-width: 232px;
+    max-height: 232px;
+  }
+}

@@ -1,4 +1,13 @@
+@import url(./__credits/footer__credits.css);
+@import url(./__icon/footer__icon.css);
+@import url(./__nav-item/footer__nav-item.css);
+@import url(./__nav/footer__nav.css);
+@import url(./_socials/footer__socials.css);
+
 .footer {
-  /* width: calc(100% - 2*(100% / 13.85));
-  padding: 0 calc(100% / 13.85); */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: calc(100vw / 36 + 40px);
+  max-height: 80px;
 }

@@ -1,3 +1,16 @@
 @import url(./__heading/technologies__heading.css);
 @import url(./__list/technologies__list.css);
 @import url(./__pic/technologies__pic.css);
+@import url(./__list-item/technologies__list-item.css);
+@import url(./__name/technologies__name.css);
+
+.technologies {
+  display: flex;
+  background: #F5F6F7;
+}
+
+@media screen and (max-width: 1145px) {
+  .technologies {
+    display: block;
+  }
+}

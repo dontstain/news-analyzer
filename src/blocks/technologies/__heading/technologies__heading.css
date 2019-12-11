@@ -1,7 +1,22 @@
 .technologies__heading {
+  max-width: 344px;
+  margin: 0 calc(100vw / 8.18) 0 0;
   font-family: 'Roboto Slab', Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
+}
+
+@media screen and (max-width: 1145px) {
+  .technologies__heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .technologies__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

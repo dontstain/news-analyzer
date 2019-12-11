@@ -2,6 +2,7 @@
   margin-top: calc(100vw / 28 + 100vw / 36 + 40px);
   width: calc(100vw / 1.81);
   max-width: 600px;
+  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 500px) {

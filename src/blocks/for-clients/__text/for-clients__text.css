@@ -6,3 +6,13 @@
   line-height: 24px;
   margin: 0 0 24px;
 }
+
+.for-clients__text:last-of-type {
+  margin: 0 0 174px;
+}
+
+@media screen and (max-width: 768px) {
+  .for-clients__text:last-of-type {
+    margin: 0 0 66px;
+  }
+}

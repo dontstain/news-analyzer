@@ -3,6 +3,7 @@
 @import url(./__nav-item/footer__nav-item.css);
 @import url(./__nav/footer__nav.css);
 @import url(./_socials/footer__socials.css);
+@import url(./__nav-list/footer__nav-list.css);
 
 .footer {
   display: flex;
@@ -10,4 +11,15 @@
   align-items: baseline;
   height: calc(100vw / 36 + 40px);
   max-height: 80px;
+}
+
+@media screen and (max-width: 640px) {
+  .footer {
+    height: unset;
+    max-height: unset;
+    display: grid;
+    grid-template: 
+      "b c" 1fr
+      "a ." 44px;
+  }
 }

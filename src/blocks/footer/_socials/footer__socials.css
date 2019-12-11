@@ -3,3 +3,9 @@
   justify-content: space-between;
   width: 68px;
 }
+
+@media screen and (max-width: 640px) {
+  .footer__socials {
+    grid-area: c;
+  }
+}

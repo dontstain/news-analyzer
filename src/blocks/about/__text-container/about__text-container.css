@@ -4,3 +4,11 @@
   width: calc(100vw / 1.81);
   max-width: 600px;
 }
+
+@media screen and (max-width: 500px) {
+  .about__text-container {
+    width: 100%;
+    transform: none;
+    margin-bottom: 32px;
+  }
+}

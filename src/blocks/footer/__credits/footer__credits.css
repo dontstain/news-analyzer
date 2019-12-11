@@ -11,3 +11,9 @@
 .footer__credits:hover {
   cursor: default;
 }
+
+@media screen and (max-width: 640px) {
+ .footer__credits {
+   grid-area: a;
+ } 
+}

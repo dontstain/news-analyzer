@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Дмитрий Трипольский">
+  <meta name="description" content="Сайт для подбора актуальных новостей по запросу пользователя">
+  <title>News Analyzer - About</title>
+  <!-- <link rel="icon" type="image/svg" href="<%=require('./images/favicon.svg').default%>"> -->
+  <link rel="stylesheet" href="./pages/about.css">
+  <!-- <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>"> -->
+</head>
+<body>
+  <div class="page">
+    <header class="header header_light cut-section">
+      <h1 class="header__title">
+        NewsAnalyzer
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">          
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-text link"> 
+              Главная
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-item_active">
+            <a href="#" class="header__nav-text header__nav-text_active link">
+              О проекте
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="search">
+
+      </section>
+      <section class="for-clients">
+
+      </section>
+      <section class="about cut-section">
+        <img src="./images/author.jpg" alt="Фото автора" class="about__photo">
+        <div class="about__text-container">
+          <h2 class="about__heading">
+            Об авторе
+          </h2>
+          <p class="about__text">
+            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете. 
+          </p>
+          <p class="about__text">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -3,7 +3,13 @@
   width: 100%;
   height: calc(100vw / 2.5);
   max-height: 576px;
-  transform: translate(0, calc(-100vw / 36 - 40px));
+  margin-top: calc(-100vw / 36 - 40px);
   background: top no-repeat url("../../images/cover.png") ;
   z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .search {
+    margin-top: -56px;
+  }
 }

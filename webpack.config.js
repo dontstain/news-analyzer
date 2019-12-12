@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: { 
     main: './src/scripts/main.js',
-    about: './src/scripts/about.js',
+    // about: './src/scripts/about.js',
     // stats: './src/scripts/stats.js'
   },
   output: {
@@ -52,11 +52,11 @@ module.exports = {
       template: './src/main.html',
       filename: 'main.html'
     }),
-    new HtmlWebpackPlugin({ 
-      inject: false,
-      template: './src/about.html',
-      filename: 'about.html'
-    }),
+    // new HtmlWebpackPlugin({ 
+    //   inject: false,
+    //   template: './src/about.html',
+    //   filename: 'about.html'
+    // }),
     new MiniCssExtractPlugin({
       filename: 'main.[contenthash].css',
     }),

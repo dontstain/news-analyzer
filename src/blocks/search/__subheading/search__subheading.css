@@ -1,0 +1,16 @@
+.search__subheading {
+  max-width: 545px;
+  margin: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .search__subheading {
+    max-width: 452px;
+  }
+}

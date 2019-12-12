@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Дмитрий Трипольский">
+  <meta name="description" content="Сайт для подбора актуальных новостей по запросу пользователя">
+  <title>News Analyzer - Analytics</title>
+  <!-- <link rel="icon" type="image/svg" href="<%=require('./images/favicon.svg').default%>"> -->
+  <link rel="stylesheet" href="./pages/stats.css">
+  <!-- <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>"> -->
+</head>
+<body>
+  <div class="page">
+    <header class="header header_light cut-section">
+      <h1 class="header__title">
+        NewsAnalyzer
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">          
+          <li class="header__nav-item">
+            <a href="./main.html" class="header__nav-text link"> 
+              Главная
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-item_active">
+            <a href="./about.html" class="header__nav-text header__nav-text_active link">
+              О проекте
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="statistics">
+
+      </section>
+      <section class="analytics">
+
+      </section>
+    </main>
+
+    <footer class="footer cut-section">
+        <p class="footer__credits">
+          © 2019  Supersite
+        </p>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="link">
+                Главная
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="link">
+                О проекте
+              </a>
+            </li>
+            <li class="footer__nav-item">
+                <a href="https://praktikum.yandex.ru/" class="link">
+                Яндекс.Практикум
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__socials">
+          <a href="https://github.com/dontstain" class="link">
+            <img src="./images/github.svg" alt="Логотип GitHub" class="footer__icon">
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100004625556968" class="link">
+            <img src="./images/facebook.svg" alt="Логотип Facebook" class="footer__icon">
+          </a>            
+        </div>
+      </footer>
+
+  </div>
+  <!-- <script src="<%= htmlWebpackPlugin.files.chunks.stats.entry %>"></script> -->
+</body>
+</html>

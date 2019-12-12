@@ -1,0 +1,6 @@
+.search__header-container {
+  width: calc(100vw / 1.7);
+  max-width: 608px;
+  margin: 0 auto;
+  padding-top: calc(100vw / 12 + 40px);
+}

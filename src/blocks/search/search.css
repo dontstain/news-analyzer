@@ -1,7 +1,11 @@
+@import url(./__header-container/search__header-container.css);
+@import url(./__heading/search__heading.css);
+@import url(./__subheading/search__subheading.css);
+
 .search {
   position: relative;
   width: 100%;
-  height: calc(100vw / 2.5);
+  height: calc(100vw / 4 + 205px);
   max-height: 576px;
   margin-top: calc(-100vw / 36 - 40px);
   background: top no-repeat url("../../images/cover.png") ;

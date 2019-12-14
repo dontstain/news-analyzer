@@ -1,0 +1,19 @@
+.news-card__text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; 
+  margin: 0 0 58px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 900px) {
+  .news-card__text {    
+    -webkit-line-clamp: 4;
+    margin: 0 0 48px;
+  }
+}

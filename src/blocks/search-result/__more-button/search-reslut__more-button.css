@@ -17,6 +17,7 @@
 
 .search-result__more-button:hover {
   cursor: pointer;
+  background: rgb(235, 235, 235);
 }
 
 @media screen and (max-width: 900px) {

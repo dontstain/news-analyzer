@@ -1,0 +1,9 @@
+.statistics__stats {
+  margin: 0 0 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .statistics__stats {
+    margin: 0 0 32px;
+  }
+}

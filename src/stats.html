@@ -34,9 +34,9 @@
     </header>
 
     <main class="main">
-      <section class="statistics">
+      <section class="statistics cut-section">
         <p class="statistics__location">
-          Главная / Аналитика
+          Главная / <span class="statistics__sublocation">Аналитика</span> 
         </p>
         <h2 class="statistics__heading">
           Вы спросили: «Путешествия»
@@ -45,26 +45,154 @@
 
           <div class="statistics__stats-item">
             <dt class="statistics__stats-name">
-              Новостей за неделю
+              Новостей за неделю:
             </dt>
-            <dl class="statistics__stats-number">
+            <dd class="statistics__stats-number">
               34 324
-            </dl>
+            </dd>
           </div>
 
           <div class="statistics__stats-item">
             <dt class="statistics__stats-name">
-              Упоминаний в заголовках
+              Упоминаний в заголовках:
             </dt>
-            <dl class="statistics__stats-number">
+            <dd class="statistics__stats-number">
               235
-            </dl>
+            </dd>
           </div>
 
         </dl>
       </section>
-      <section class="analytics">
+      <section class="analytics cut-section">
+        <h2 class="analytics__heading">
+          Аналитика по дням
+        </h2>
+        <table class="analytics__table">
+          <thead class="analytics__table-header">
+            <tr class="analytics__table-header-row">
+              <th class="analytics__table-heading">
+                Дата (август)
+              </th>
+              <th class="analytics__table-heading" colspan="5">
+                Кол-во упоминаний
+              </th>
+            </tr>
+            <tr class="analytics__table-row">
+              <td class="analytics__table-cell">
+              </td>
+              <th class="analytics__table-subheading">
+                0
+              </th>
+              <th class="analytics__table-subheading">
+                25
+              </th>
+              <th class="analytics__table-subheading">
+                50
+              </th>
+              <th class="analytics__table-subheading">
+                75
+              </th>
+              <th class="analytics__table-subheading">
+                100
+              </th>
+            </tr>
+          </thead>
 
+          <tbody class="analytics__table-body">
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date analytics__table-date_first" scope="row">
+                19, пн
+              </th>
+              <td class="analytics__table-amount analytics__table-amount_first" colspan="5">
+                <div class="analytics__table-value analytics__table-value_one">
+                  15
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date" scope="row">
+                20, вт
+              </th>
+              <td class="analytics__table-amount" colspan="5">
+                <div class="analytics__table-value analytics__table-value_two">
+                  18
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date" scope="row">
+                21, ср
+              </th>
+              <td class="analytics__table-amount" colspan="5">
+                <div class="analytics__table-value analytics__table-value_three">
+                  11
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date" scope="row">
+                22, чт
+              </th>
+              <td class="analytics__table-amount" colspan="5">
+                <div class="analytics__table-value analytics__table-value_four">
+                  39
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date" scope="row">
+                23, пт
+              </th>
+              <td class="analytics__table-amount" colspan="5">
+                <div class="analytics__table-value analytics__table-value_five">
+                  45
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date" scope="row">
+                24, сб
+              </th>
+              <td class="analytics__table-amount" colspan="5">
+                <div class="analytics__table-value analytics__table-value_six">
+                  73
+                </div>
+              </td>
+            </tr>
+            <tr class="analytics__table-row">
+              <th class="analytics__table-date analytics__table-date_last" scope="row">
+                25, вс
+              </th>
+              <td class="analytics__table-amount analytics__table-amount_last" colspan="5">
+                <div class="analytics__table-value analytics__table-value_seven">
+                  34
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          
+          <tfoot class="analytics__table-footer">
+            <tr class="analytics__table-row">
+              <td class="analytics__table-cell">
+              </td>
+              <th class="analytics__table-subheading">
+                0
+              </th>
+              <th class="analytics__table-subheading">
+                25
+              </th>
+              <th class="analytics__table-subheading">
+                50
+              </th>
+              <th class="analytics__table-subheading">
+                75
+              </th>
+              <th class="analytics__table-subheading">
+                100
+              </th>
+            </tr>
+          </tfoot>
+        </table>
       </section>
     </main>
 
@@ -85,17 +213,17 @@
               </a>
             </li>
             <li class="footer__nav-item">
-                <a href="https://praktikum.yandex.ru/" class="link">
+                <a href="https://praktikum.yandex.ru/" class="link" target="_blank">
                 Яндекс.Практикум
               </a>
             </li>
           </ul>
         </nav>
         <div class="footer__socials">
-          <a href="https://github.com/dontstain" class="link">
+          <a href="https://github.com/dontstain" class="link" target="_blank">
             <img src="./images/github.svg" alt="Логотип GitHub" class="footer__icon">
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100004625556968" class="link">
+          <a href="https://www.facebook.com/profile.php?id=100004625556968" class="link" target="_blank">
             <img src="./images/facebook.svg" alt="Логотип Facebook" class="footer__icon">
           </a>            
         </div>

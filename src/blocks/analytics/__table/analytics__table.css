@@ -1,0 +1,11 @@
+.analytics__table {
+  width: 100%;
+  margin-bottom: 84px;
+  border-collapse: collapse;
+}
+
+@media screen and (max-width: 768px) {
+  .analytics__table {
+    margin-bottom: 40px;
+  }
+}

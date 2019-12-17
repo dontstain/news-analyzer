@@ -1,0 +1,12 @@
+.analytics__table-date.analytics__table-date_first {
+  padding-top: 10px;
+  padding-bottom: 32px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .analytics__table-date.analytics__table-date_first {
+    padding-top: 19px;
+    padding-bottom: 16px;
+  }
+}

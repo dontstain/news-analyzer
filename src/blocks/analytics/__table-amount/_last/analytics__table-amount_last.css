@@ -1,0 +1,9 @@
+.analytics__table-amount.analytics__table-amount_last {
+  padding-top: 28px;
+}
+
+@media screen and (max-width: 500px) {
+  .analytics__table-amount.analytics__table-amount_last{
+    padding-top: 8px;
+  }
+}

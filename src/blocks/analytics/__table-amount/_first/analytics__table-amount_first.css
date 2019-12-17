@@ -1,0 +1,10 @@
+.analytics__table-amount.analytics__table-amount_first {  
+  padding-bottom: 22px;
+}
+
+@media screen and (max-width: 500px) {
+  .analytics__table-amount.analytics__table-amount_first {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+}

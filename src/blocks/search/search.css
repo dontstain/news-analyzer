@@ -8,10 +8,9 @@
 .search {
   position: relative;
   width: 100%;
-  /* height: calc(100vw / 4 + 205px); */
   max-height: 576px;
-  margin-top: calc(-100vw / 36 - 40px);
-  background: top no-repeat url("../../images/cover.png") ;
+  margin: calc(-100% / 36 - 40px) 0;
+  background: top no-repeat #F5F6F7 url("../../images/cover.png") ;
   z-index: 1;
 }
 

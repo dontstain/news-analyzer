@@ -4,5 +4,6 @@
 @import url(./__arrow/commits__arrow.css);
 
 .commits {
+  display: grid;
   background:  #F5F6F7;
 }

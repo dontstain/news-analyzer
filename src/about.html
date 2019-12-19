@@ -8,9 +8,9 @@
   <meta name="description" content="Сайт для подбора актуальных новостей по запросу пользователя">
   <title>News Analyzer - About</title>
   <!-- <link rel="icon" type="image/svg" href="<%=require('./images/favicon.svg').default%>"> -->
+  <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="./pages/about.css">
   <!-- <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>"> -->
-  <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
 </head>
 <body>
   <div class="page">
@@ -100,32 +100,44 @@
           </p>
         </div>
       </section>
-      <section class="commits cut-section">
+      <section class="commits">
         <!-- <div class="commits__text-container"> -->
           <h2 class="commits__heading">
             История коммитов из GitHub
           </h2>
-          <a href="https://github.com/dontstain/news-analyzer/commits/master" class="commits__link link" target="_blank">
-            Открыть в  Github  <img src="./images/arrow.svg" alt="Стрелка вправо" class="commits__arrow">
-          </a>
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
+          <div class="commits__link-container">
+            <a href="https://github.com/dontstain/news-analyzer/commits/master" class="commits__link link" target="_blank">
+              Открыть в  Github  <img src="./images/arrow.svg" alt="Стрелка вправо" class="commits__arrow">
+            </a>
+          </div>
+          
+          <div class="swiper-container commits__slider">
+            <div class="swiper-wrapper commits__slider-wrapper">
+                <div class="swiper-slide commits__slider-slide">
+                  <div class="commits__card">
+
+                  </div>
+                </div>
+                <div class="swiper-slide commits__slider-slide">Slide 2
+
+                </div>
+                <div class="swiper-slide commits__slider-slide">Slide 3
+
+                </div>
+                <div class="swiper-slide commits__slider-slide">Slide 4
+
+                </div>
+                <div class="swiper-slide commits__slider-slide">Slide 5
+
+                </div>
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-button-prev commits__slider-button-container">
+              <img src="./images/slider-arrow-left.svg" class="commits__slider-button" alt="Кнопка влево">
+            </div>
+            <div class="swiper-button-next commits__slider-button-container">
+              <img src="./images/slider-arrow-right.svg" alt="Кнопка вправо">
+            </div>
         </div>
         <!-- </div> -->
       </section>
@@ -165,6 +177,7 @@
       </footer>
   </div>  
   <script src="../node_modules/swiper/js/swiper.min.js"></script>
+  <script src="./scripts/about.js"></script>
   <!-- <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script> -->
 </body>
 </html>

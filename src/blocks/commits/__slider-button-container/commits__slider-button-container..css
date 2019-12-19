@@ -1,0 +1,16 @@
+.commits__slider-button-container {
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  margin: 0 24px;
+}
+
+.commits__slider-button-container::after {
+  content: none;
+}
+
+@media screen and (max-width: 768px) {
+  .commits__slider-button-container {
+    display: none;
+  }
+}

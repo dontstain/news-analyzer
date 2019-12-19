@@ -1,18 +1,30 @@
 .commits__link {
   display: flex;
+  position: absolute;
+  right: calc(100% / 5 - 10px);
+  top: 10%;
   align-items: center; 
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  grid-area: b;
+}
+
+@media screen and (max-width: 640px) {
+  .commits__link {
+    right: 16px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .commits__link {
     display: block;
-    width: 100%;
+    position: static;
+    width: calc(100% - 32px);
     height: 56px;
+    margin: 0 16px 32px;
     padding: 16px;
     border: 1px solid #1A1B22;
     box-sizing: border-box;

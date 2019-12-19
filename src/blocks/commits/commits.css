@@ -2,8 +2,28 @@
 @import url(./__link/commits__link.css);
 @import url(./__text-container/commits__text-container.css);
 @import url(./__arrow/commits__arrow.css);
+@import url(./__slider/commits__slider.css);
+@import url(./__slider-lb/commits__slider-button.css);
+@import url(./__slider-button-container/commits__slider-button-container..css);
+@import url(./__slider-wrapper/commits__slider-wrapper.css);
+@import url(./__slider-slide/commits__slider-slide.css);
+@import url(./__card/commits__card.css);
+@import url(./__link-container/commits__link-container.css);
 
 .commits {
   display: grid;
+  grid-template: 
+    "a b"
+    "c c";
+  padding-top: 72px;
   background:  #F5F6F7;
+}
+
+@media screen and (max-width: 525px) {
+  .commits {
+    grid-template: 
+      "a"
+      "c"
+      "b";
+  }
 }

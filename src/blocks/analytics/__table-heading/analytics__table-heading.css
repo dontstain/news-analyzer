@@ -12,7 +12,7 @@
   vertical-align: top;
 }
 .analytics__table-heading:first-of-type {
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 @media screen and (max-width: 500px) {

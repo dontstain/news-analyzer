@@ -1,0 +1,16 @@
+.commits__card-header {
+  width: calc(352px - 64px - 16px);
+  grid-area: c;
+}
+
+@media screen and (max-width: 768px) {
+  .commits__card-header {
+    width: calc(288px - 48px - 12px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .commits__card-header {
+    width: calc(256px - 48px - 12px);
+  }
+}

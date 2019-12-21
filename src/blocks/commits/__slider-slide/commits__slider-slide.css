@@ -1,3 +1,4 @@
 .commits__slider-slide {
-  width: 400px;
+  width: fit-content;
+  overflow: visible;
 }

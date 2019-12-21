@@ -17,3 +17,9 @@
     margin: 0 0 48px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .news-card__text {
+    margin: 0 0 40px;
+  }
+}

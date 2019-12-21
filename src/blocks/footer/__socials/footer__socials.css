@@ -5,8 +5,15 @@
   width: 68px;
 }
 
+@media screen and (max-width: 768px) {
+  .footer__socials {
+    margin-left: calc(100vw * 4 / 15.36 - 150px);
+  }
+}
+
 @media screen and (max-width: 640px) {
   .footer__socials {
+    margin-left: 0;
     grid-area: c;
   }
 }

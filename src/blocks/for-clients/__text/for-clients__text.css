@@ -8,11 +8,17 @@
 }
 
 .for-clients__text:last-of-type {
-  margin: 0 0 174px;
+  margin: 0 0 94px;
 }
 
 @media screen and (max-width: 768px) {
   .for-clients__text:last-of-type {
-    margin: 0 0 66px;
+    margin: 0 0 55px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .for-clients__text:last-of-type {
+    margin: 0 0 28px;
   }
 }

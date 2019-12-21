@@ -6,11 +6,24 @@
 
 .technologies {
   display: flex;
+  padding-top: 80px;
   background: #F5F6F7;
 }
 
 @media screen and (max-width: 1145px) {
   .technologies {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .technologies {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .technologies {
+    padding-top: 32px;
   }
 }

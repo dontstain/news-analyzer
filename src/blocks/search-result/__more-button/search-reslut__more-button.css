@@ -2,7 +2,7 @@
   display: block;
   width: 288px;
   height: 64px;
-  margin: 0 auto 80px;
+  margin: 0 auto;
   padding: 0;
   border: none;
   background: #FFFFFF;
@@ -18,16 +18,4 @@
 .search-result__more-button:hover {
   cursor: pointer;
   background: rgb(235, 235, 235);
-}
-
-@media screen and (max-width: 900px) {
-  .search-result__more-button {
-    margin-bottom: 40px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .search-result__more-button {
-    margin-bottom: 44px;
-  }
 }

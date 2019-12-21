@@ -27,7 +27,7 @@
 @media screen and (max-width: 500px) {
   .commits__heading {
     margin-bottom: 16px;
-    width: 100%;
+    width: calc(100% - 32px);
     line-height: 40px;
   }
 }

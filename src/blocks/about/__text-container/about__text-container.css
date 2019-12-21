@@ -5,11 +5,17 @@
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 768px) {
+  .about__text-container {
+    margin-top: 40px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about__text-container {
     width: 100%;
     transform: none;
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 }

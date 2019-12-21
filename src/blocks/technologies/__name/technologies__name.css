@@ -7,3 +7,9 @@
   line-height: 24px;
   letter-spacing: 0.2px;
 }
+
+@media screen and (max-width: 500px) {
+  .technologies__name {
+    margin: 20px 0 10px;
+  }
+}

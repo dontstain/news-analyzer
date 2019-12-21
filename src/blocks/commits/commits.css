@@ -6,8 +6,15 @@
 @import url(./__slider-button-container/commits__slider-button-container..css);
 @import url(./__slider-wrapper/commits__slider-wrapper.css);
 @import url(./__slider-slide/commits__slider-slide.css);
-@import url(./__card/commits__card.css);
 @import url(./__link-container/commits__link-container.css);
+@import url(./__card/commits__card.css);
+@import url(./__card-date/commits__card-date.css);
+@import url(./__card-email/commits__card-email.css);
+@import url(./__card-header/commits__card-header.css);
+@import url(./__card-img/commits__card-img.css);
+@import url(./__card-name/commits__card-name.css);
+@import url(./__card-text/commits__card-text.css);
+
 
 .commits {
   display: grid;
@@ -18,11 +25,18 @@
   background:  #F5F6F7;
 }
 
+@media screen and (max-width: 768px) {
+  .commits {
+    padding-top: 42px;
+  }
+}
+
 @media screen and (max-width: 525px) {
   .commits {
     grid-template: 
       "a"
       "c"
-      "b";
+      "b" 100px;
+    padding-top: 20px;
   }
 }

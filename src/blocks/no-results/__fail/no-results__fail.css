@@ -1,0 +1,5 @@
+@import url(./_hidden/no-results__fail_hidden.css);
+
+.no-results__fail {
+  display: block;
+}

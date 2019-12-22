@@ -10,13 +10,13 @@
 }
 
 @media screen and (max-width: 900px) {
-  .search-result__more-button {
+  .search-result {
     padding-bottom: 40px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .search-result__more-button {
+  .search-result {
     padding-bottom: 44px;
   }
 }

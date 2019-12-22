@@ -1,6 +1,6 @@
 {
   "name": "news-analyzer",
-  "homepage": "https://github.com/dontstain/news-analyzer#readme",
+  "homepage": "https://github.com/dontstain/news-analyzer/",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/dontstain/news-analyzer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dmitry Tripolsky",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dontstain/news-analyzer/issues"

@@ -1,9 +1,0 @@
-.commits__arrow {
-
-}
-
-@media screen and (max-width: 500px) {
-  .commits__arrow {
-    display: none;
-  }
-}

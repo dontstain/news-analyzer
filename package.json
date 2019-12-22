@@ -5,9 +5,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
-    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+    "dev": "webpack-dev-server --mode development --open --watch",
+    "build": "rimraf dist && webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,6 @@
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "core-js": "3.1.4",
-    "swiper": "^5.2.1"
+    "swiper": "5.2.1"
   }
 }

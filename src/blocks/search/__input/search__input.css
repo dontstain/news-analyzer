@@ -29,6 +29,10 @@
   color: #B6BCBF;
 }
 
+.search__input:focus {
+  border: 1px solid #2F71E5;
+}
+
 @media screen and (max-width: 768px) {
   .search__input {
     min-width: 410px;

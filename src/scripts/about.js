@@ -1,3 +1,7 @@
+import '../vendor/swiper/swiper.min.css'
+import '../pages/about.css'
+import '../vendor/swiper/swiper.min.js'
+
 var mySwiper = new Swiper ('.swiper-container', {
   direction: 'horizontal',
   pagination: {

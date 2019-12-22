@@ -1,0 +1,43 @@
+.analytics__table-subheading {
+  width: 21%;
+  padding-top: 16px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  text-align: center;
+}
+
+.analytics__table-subheading:first-of-type {
+  width: 14.5%;
+  text-align: left;
+}
+
+.analytics__table-subheading:last-of-type {
+  width: 14%;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .analytics__table-subheading {
+    width: 18.5%;
+  }
+
+  .analytics__table-subheading:first-of-type {
+    width: 13.5%;
+  }
+
+  .analytics__table-subheading:last-of-type {
+    width: 13.5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .analytics__table-subheading {
+    display: none;
+  }
+}

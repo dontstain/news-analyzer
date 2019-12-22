@@ -1,0 +1,10 @@
+.commits__link-container {
+  position: relative;
+}
+
+@media screen and (max-width: 525px) {
+  .commits__link-container {
+    height: 56px;
+    margin-bottom: 32px;
+  }
+}

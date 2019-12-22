@@ -1,0 +1,22 @@
+@import url(./__header-container/search__header-container.css);
+@import url(./__heading/search__heading.css);
+@import url(./__subheading/search__subheading.css);
+@import url(./__form/search__form.css);
+@import url(./__input/search__input.css);
+@import url(./__submit-button.css/search__submit-button.css);
+
+.search {
+  position: relative;
+  width: 100%;
+  max-height: 576px;
+  margin: calc(-100% / 36 - 40px) 0;
+  background: top no-repeat #F5F6F7 url("../../images/cover.png") ;
+  z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .search {
+    height: unset;
+    margin-top: -56px;
+  }
+}

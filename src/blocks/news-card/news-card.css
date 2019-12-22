@@ -1,0 +1,17 @@
+@import url(./__text-content/news-card__text-content.css);
+@import url(./__date/news-card__date.css);
+@import url(./__heading/news-card__heading.css);
+@import url(./__image/news-card__image.css);
+@import url(./__source/news-card__source.css);
+@import url(./__text/news-card__text.css);
+
+.news-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  cursor: pointer;
+  box-shadow: 0 20px 15px 10px rgba(8, 29, 45, 0.1);
+}

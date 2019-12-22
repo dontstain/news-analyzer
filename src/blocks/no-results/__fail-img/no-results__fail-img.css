@@ -1,0 +1,12 @@
+.no-results__fail-img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 80px auto 24px;
+}
+
+@media screen and (max-width: 500px) {
+  .no-results__fail-img {
+    margin-top: 50px;
+  }
+}

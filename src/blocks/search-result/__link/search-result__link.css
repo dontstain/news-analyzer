@@ -1,0 +1,9 @@
+.search-result__link {
+  display: flex;
+  align-items: center; 
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}

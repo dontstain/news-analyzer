@@ -1,0 +1,24 @@
+.for-clients__text {
+  max-width: 815px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+.for-clients__text:last-of-type {
+  margin: 0 0 94px;
+}
+
+@media screen and (max-width: 768px) {
+  .for-clients__text:last-of-type {
+    margin: 0 0 55px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .for-clients__text:last-of-type {
+    margin: 0 0 28px;
+  }
+}

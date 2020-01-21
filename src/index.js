@@ -1,3 +1,5 @@
-import './scripts/main.js';
-import './scripts/about.js';
-import './scripts/stats.js';
+import './pages/index.css';
+
+// import './scripts/main.js';
+// import './scripts/about.js';
+// import './scripts/stats.js';

@@ -15,7 +15,6 @@ export class CommitCardList {
 
   render() {
     for (let i = 0; i < 20; i++) {
-      console.log(this.commits[i])
       this.addCard(this.commits[i]);
     }
   }

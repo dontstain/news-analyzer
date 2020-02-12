@@ -8,7 +8,7 @@ export class CommitCard {
     <div class="swiper-slide commits__slider-slide">
       <div class="commits__card">
         <p class="commits__card-date">
-          ${this.commitInfo.commit.committer.date}
+          ${new Date(this.commitInfo.commit.committer.date).getDate()}-${new Date(this.commitInfo.commit.committer.date).getMonth()}-${new Date(this.commitInfo.commit.committer.date).getFullYear()}
         </p>
         <img src="${this.commitInfo.author? this.commitInfo.author.avatar_url : `https://avatars1.githubusercontent.com/u/22224322?v=4`}" alt="Аватар" class="commits__card-img">
         <div class="commits__card-header">

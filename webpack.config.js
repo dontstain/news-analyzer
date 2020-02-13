@@ -13,13 +13,13 @@ module.exports = {
     stats: './src/stats/stats.js'
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: './scripts/[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{
       test: /\.js$/, 
-      use: { loader: "babel-loader" }, 
+      use: { loader: 'babel-loader' }, 
       exclude: /node_modules/ 
     },
     {
@@ -30,7 +30,7 @@ module.exports = {
     {
       test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
             options: {
@@ -42,7 +42,7 @@ module.exports = {
      },
      {
       test: /\.(eot|ttf|woff|woff2)$/,
-      loader: 'file-loader?name=./vendor/[name].[ext]'
+      loader: 'file-loader?name=./fonts/[name].[ext]'
     }
   ]
   },
@@ -63,7 +63,7 @@ module.exports = {
       filename: 'stats.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: './styles/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

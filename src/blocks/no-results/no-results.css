@@ -5,6 +5,7 @@
 @import url(./__fail-img/no-results__fail-img.css);
 @import url(./__fail-heading/no-results__fail-heading.css);
 @import url(./__fail-subheading/no-results__fail-subheading.css);
+@import url(./__error/no-results__error.css);
 
 .no-results {
   background-color: #F5F6F7;

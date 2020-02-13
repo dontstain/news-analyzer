@@ -1,5 +1,5 @@
 import renderBlock from '../utils/render-block.js';
-import {RESULT, NO_RESULT, LOADING} from '../constants/blocks.js';
+import {RESULT, NO_RESULT, LOADING, ERROR} from '../constants/blocks.js';
 
 export class HandlingEvents {
   constructor(api) {
@@ -22,11 +22,14 @@ export class HandlingEvents {
         renderBlock(LOADING);
         this.api.getNews(`${document.querySelector('.search__input').value}`)
           .then(res => {
-            console.log(res);
-            if (res.articles.length) {
-              renderBlock(RESULT);
+            if (res) {
+              if (res.articles.length) {
+                renderBlock(RESULT);
+              } else {
+                renderBlock(NO_RESULT);
+              }
             } else {
-              renderBlock(NO_RESULT);
+              renderBlock(ERROR);
             }
           })
       }

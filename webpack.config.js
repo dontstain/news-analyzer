@@ -27,7 +27,7 @@ module.exports = {
       use: [
         {
           loader: (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
-          options: {
+          options: isDev ? {} : {
             publicPath: '../'
           },
         },

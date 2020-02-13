@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.search__submit-button:focus {
+.search__submit-button:active {
   background: #2A65CC;
 }
 

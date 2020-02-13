@@ -1,0 +1,13 @@
+@import url(./_hidden/commits__error_hidden.css);
+
+.commits__error {
+  margin: 0 40px 60px;
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46x;
+  text-align: center;
+  color: #B6BCBF;
+  grid-area: c;
+}

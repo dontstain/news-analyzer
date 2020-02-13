@@ -11,7 +11,14 @@ let commitCards;
 
 gitApi.getCommits()
   .then(commits => {
-    commitCards = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits);
+    if (commits) {
+      commitCards = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits);
+    } else {
+      let empty = document.querySelector('.swiper-container');
+      
+      empty.nextElementSibling.classList.remove('commits__error_hidden');
+      empty.setAttribute('style', 'display: none');
+    }
   })
   .then(() => {
     var mySwiper = new Swiper ('.swiper-container', {

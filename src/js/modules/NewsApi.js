@@ -16,15 +16,16 @@ export class NewsApi {
 
   getNews() {
     return fetch(this.req)
-      .then(function(response) {
-        return response.json();
-      })
       .then(res => {
-        console.log(res);
+        if (res.ok) {
+          return res.json()
+        }
+        return Promise.reject(`Ошибка: ${res.status}`)
       })
+      .catch(err => console.log(err));
   }
 }
 
-let news = new NewsApi('goat');
+let news = new NewsApi('goat, car');
 news.getNews();
 

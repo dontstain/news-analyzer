@@ -1,0 +1,9 @@
+class NewsCardList {
+  constructor() {
+
+  }
+
+  renderThree() {
+    
+  }
+}

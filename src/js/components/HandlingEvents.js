@@ -1,3 +1,6 @@
+import renderBlock from '../utils/render-block.js';
+import {RESULT, NO_RESULT, LOADING} from '../constants/blocks.js';
+
 export class HandlingEvents {
   constructor(api) {
     this.api = api;
@@ -16,11 +19,16 @@ export class HandlingEvents {
       event.preventDefault();
 
       if (event.target.classList.contains('search__form')) {
-        console.log(document.querySelector('.search__input').value);
+        renderBlock(LOADING);
         this.api.getNews(`${document.querySelector('.search__input').value}`)
-        .then(res => {
-          console.log(res);
-        })
+          .then(res => {
+            console.log(res);
+            if (res.articles.length) {
+              renderBlock(RESULT);
+            } else {
+              renderBlock(NO_RESULT);
+            }
+          })
       }
     }
   }

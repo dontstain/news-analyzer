@@ -3,7 +3,7 @@ import getFromDate from '../utils/get-from-date.js';
 
 export class NewsApi {
   constructor() {    
-    this.apiKey = NEWS_API_KEY;
+    this.apiKey = NEWS_API_KEY;    
   }
 
   getNews(keyword) {

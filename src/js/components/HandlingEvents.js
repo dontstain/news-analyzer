@@ -1,6 +1,9 @@
 import renderBlock from '../utils/render-block.js';
-import {RESULT, NO_RESULT, LOADING, ERROR} from '../constants/blocks.js';
+import {RESULT, CARDS, NO_RESULT, LOADING, ERROR} from '../constants/blocks.js';
+import {NewsCard} from '../components/NewsCard.js';
+import {NewsCardList} from '../components/NewsCardList';
 
+const newsCard = new NewsCard();
 export class HandlingEvents {
   constructor(api) {
     this.api = api;
@@ -17,13 +20,17 @@ export class HandlingEvents {
 
     else if (event.type === 'submit') {
       event.preventDefault();
-
+      
+      CARDS.innerHTML = '';
       if (event.target.classList.contains('search__form')) {
         renderBlock(LOADING);
         this.api.getNews(`${document.querySelector('.search__input').value}`)
           .then(res => {
             if (res) {
               if (res.articles.length) {
+                const newsCardList = new NewsCardList(CARDS, res.articles, newsCard); 
+                
+                newsCardList.renderThree();
                 renderBlock(RESULT);
               } else {
                 renderBlock(NO_RESULT);

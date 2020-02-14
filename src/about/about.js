@@ -1,6 +1,6 @@
-import '../vendor/swiper/swiper.min.css'
-import '../pages/about.css'
-import '../vendor/swiper/swiper.min.js'
+import '../vendor/swiper/swiper.min.css';
+import '../pages/about.css';
+import '../vendor/swiper/swiper.min.js';
 import {GithubApi} from '../js/modules/GithubApi.js';
 import {CommitCardList} from '../js/components/CommitCardList.js';
 import {CommitCard} from '../js/components/CommitCard.js';

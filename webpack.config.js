@@ -10,7 +10,7 @@ module.exports = {
   entry: { 
     index: './src/index.js',
     about: './src/about/about.js',
-    stats: './src/stats/stats.js'
+    analytics: './src/analytics/analytics.js'
   },
   output: {
     filename: './scripts/[name].[chunkhash].js',
@@ -67,8 +67,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({ 
       inject: false,
-      template: './src/stats.html',
-      filename: 'stats.html'
+      template: './src/analytics.html',
+      filename: 'analytics.html'
     }),
     new MiniCssExtractPlugin({
       filename: './styles/[name].[contenthash].css',

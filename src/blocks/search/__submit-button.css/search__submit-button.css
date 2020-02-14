@@ -31,6 +31,7 @@
 @media screen and (max-width: 768px) {
   .search__submit-button {
     width: 160px;
+    height: 57px;
     margin-left: -163px;
   }
 }
@@ -38,7 +39,6 @@
 @media screen and (max-width: 500px) {
   .search__submit-button {
     width: 100%;
-    height: 56px;
     margin: 0;
   }
 }

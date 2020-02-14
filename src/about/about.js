@@ -14,8 +14,9 @@ gitApi.getCommits()
     if (commits) {
       commitCardList = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits, commitCard);
       commitCardList.render(); 
-    } else {
-      let empty = document.querySelector('.swiper-container');
+    } 
+    else {
+      const empty = document.querySelector('.swiper-container');
       
       empty.nextElementSibling.classList.remove('commits__error_hidden');
       empty.setAttribute('style', 'display: none');

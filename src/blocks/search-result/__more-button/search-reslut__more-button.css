@@ -21,3 +21,7 @@
   cursor: pointer;
   background: rgb(235, 235, 235);
 }
+
+.search-result__more-button:focus {
+  outline: none;
+}

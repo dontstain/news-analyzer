@@ -8,7 +8,7 @@ export class NewsCard {
     this.articleInfo = article;
     
     return `
-    <a href="${this.articleInfo.url}" class="news-card link">
+    <a href="${this.articleInfo.url}" class="news-card link" target="_blank">
       <img src="${this.articleInfo.urlToImage}" alt="Изображение к новости" class="news-card__image">
       <div class="news-card__text-content">
         <p class="news-card__date">

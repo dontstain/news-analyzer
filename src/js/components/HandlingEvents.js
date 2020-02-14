@@ -37,6 +37,10 @@ export class HandlingEvents {
             } else {
               renderBlock(ERROR);
             }
+          });
+        this.api.getTitleMentions(query)
+          .then(res => {
+            localStorage.mentions = res.totalResults;
           })
       }
     }

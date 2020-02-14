@@ -1,11 +1,12 @@
 import dateTransformer from '../utils/date-transformer.js';
 
 export class CommitCard {
-  constructor(commit) {
-    this.commitInfo = commit;
+  constructor() {
   }
 
-  create() {
+  create(commit) {
+    this.commitInfo = commit;
+    
     return `    
     <div class="swiper-slide commits__slider-slide">
       <div class="commits__card">

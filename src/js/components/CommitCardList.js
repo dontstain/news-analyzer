@@ -1,14 +1,12 @@
-import {CommitCard} from './CommitCard.js';
-
 export class CommitCardList {
-  constructor(container, commits) {
+  constructor(container, commits, cardClass) {
     this.container = container;
     this.commits = commits;
-    this.render(); 
+    this.card = cardClass;
   }
 
   addCard(commitObj) {
-    const cardMarkup = new CommitCard(commitObj).create();
+    const cardMarkup = this.card.create(commitObj);
 
     this.container.insertAdjacentHTML('beforeend', cardMarkup);
   }

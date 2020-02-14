@@ -14,7 +14,7 @@ export class HandlingEvents {
   handleEvent(event) {
     if (event.type === 'click') {
       if (event.target.classList.contains('search-result__more-button')) {
-
+        
       }
     }
 

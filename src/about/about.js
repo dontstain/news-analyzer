@@ -3,16 +3,17 @@ import '../pages/about.css'
 import '../vendor/swiper/swiper.min.js'
 import {GithubApi} from '../js/modules/GithubApi.js';
 import {CommitCardList} from '../js/components/CommitCardList.js';
+import {CommitCard} from '../js/components/CommitCard.js';
 
-
-
-let gitApi = new GithubApi();
-let commitCards;
+const gitApi = new GithubApi();
+const commitCard = new CommitCard();
+let commitCardList;
 
 gitApi.getCommits()
   .then(commits => {
     if (commits) {
-      commitCards = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits);
+      commitCardList = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits, commitCard);
+      commitCardList.render(); 
     } else {
       let empty = document.querySelector('.swiper-container');
       

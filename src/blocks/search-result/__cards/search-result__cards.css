@@ -1,6 +1,6 @@
 .search-result__cards {
   display: grid;
-  margin: 0 0 calc(100vw / 16 - 24px);
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }

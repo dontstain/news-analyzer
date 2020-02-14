@@ -1,8 +1,10 @@
+@import url(./_hidden/search-result__more-button_hidden.css);
+
 .search-result__more-button {
   display: block;
   width: 288px;
   height: 64px;
-  margin: 0 auto;
+  margin: calc(100vw / 16 - 24px) auto 0;
   padding: 0;
   border: none;
   background: #FFFFFF;

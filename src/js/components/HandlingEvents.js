@@ -4,6 +4,8 @@ import {NewsCard} from '../components/NewsCard.js';
 import {NewsCardList} from '../components/NewsCardList';
 
 const newsCard = new NewsCard();
+let newsCardList;
+
 export class HandlingEvents {
   constructor(api) {
     this.api = api;
@@ -28,7 +30,7 @@ export class HandlingEvents {
           .then(res => {
             if (res) {
               if (res.articles.length) {
-                const newsCardList = new NewsCardList(CARDS, res.articles, newsCard); 
+                newsCardList = new NewsCardList(CARDS, res.articles, newsCard); 
                 
                 newsCardList.renderThree();
                 renderBlock(RESULT);

@@ -1,4 +1,4 @@
-import dateTransformer from '../utils/date-transformer.js';
+import formCardDate from '../utils/form-card-date.js';
 
 export class NewsCard {
   constructor() {
@@ -12,7 +12,7 @@ export class NewsCard {
       <img src="${this.articleInfo.urlToImage}" alt="Изображение к новости" class="news-card__image">
       <div class="news-card__text-content">
         <p class="news-card__date">
-          ${dateTransformer(this.articleInfo.publishedAt)}
+          ${formCardDate(this.articleInfo.publishedAt)}
         </p>
         <h3 class="news-card__heading">
           ${this.articleInfo.title}

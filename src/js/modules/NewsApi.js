@@ -1,15 +1,15 @@
 import {NEWS_API_KEY} from '../constants/news-api-key.js';
-import getFromDate from '../utils/get-from-date.js';
 
 export class NewsApi {
   constructor() {    
     this.apiKey = NEWS_API_KEY;    
   }
 
-  getNews(query) {
+  getNews(query, fromDate, toDate) {
     const request = new Request('https://newsapi.org/v2/everything?' +
     `q=${query}&` +
-    `from=${getFromDate()}&` +
+    `from=${fromDate}&` +
+    `to=${toDate}&` +
     'sortBy=popularity&' +
     'pageSize=100&' +
     `apiKey=${this.apiKey}`);
@@ -24,10 +24,11 @@ export class NewsApi {
       .catch(err => console.log(err));
   }
 
-  getTitleMentions(query) {
+  getTitleMentions(query, fromDate, toDate) {
     const request = new Request('https://newsapi.org/v2/everything?' +
     `qInTitle=${query}&` +
-    `from=${getFromDate()}&` +
+    `from=${fromDate}&` +
+    `to=${toDate}&` +
     'sortBy=popularity&' +
     'pageSize=100&' +
     `apiKey=${this.apiKey}`);

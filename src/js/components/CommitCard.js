@@ -1,4 +1,4 @@
-import dateTransformer from '../utils/date-transformer.js';
+import formCardDate from '../utils/form-card-date.js';
 
 export class CommitCard {
   constructor() {
@@ -11,7 +11,7 @@ export class CommitCard {
     <div class="swiper-slide commits__slider-slide">
       <div class="commits__card">
         <p class="commits__card-date">
-          ${dateTransformer(this.commitInfo.commit.committer.date)}
+          ${formCardDate(this.commitInfo.commit.committer.date)}
         </p>
         <img src="${this.commitInfo.author? this.commitInfo.author.avatar_url : `https://avatars1.githubusercontent.com/u/22224322?v=4`}" alt="Аватар" class="commits__card-img">
         <div class="commits__card-header">

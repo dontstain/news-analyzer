@@ -1,4 +1,4 @@
-function dateTransformer(dateString) {
+function formCardDate (dateString) {
   const date = new Date(dateString);
   let month = '';
 
@@ -44,4 +44,4 @@ function dateTransformer(dateString) {
   return `${date.getDate()} ${month}, ${date.getFullYear()}`
 }
 
-export default dateTransformer;
+export default formCardDate;

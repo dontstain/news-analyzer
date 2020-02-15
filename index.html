@@ -7,8 +7,8 @@
   <meta name="author" content="Дмитрий Трипольский">
   <meta name="description" content="Сайт для подбора актуальных новостей по запросу пользователя">
   <title>News Analyzer</title>
-  <link rel="icon" type="image/svg" href="b4343dbb0d975a9c0bb5f039289d201a.svg">
-  <link rel="stylesheet" href="index.b1a231d67619da4c01ca.css">
+  <link rel="icon" type="image/svg" href="./images/favicon.svg">
+  <link rel="stylesheet" href="./styles/index.5192afb372ded5d2950f.css">
 </head>
 <body>
   <div class="page">
@@ -58,85 +58,38 @@
           </p>
         </div>
         <div class="no-results__fail no-results__fail_hidden">
-          <img src="0c2f05f85aa4ad6ba821def42aed7182.svg" alt="Изображение ошибки" class="no-results__fail-img">
+          <img src="./images/not-found.svg" alt="Изображение ошибки" class="no-results__fail-img">
           <h2 class="no-results__fail-heading">
             Ничего не найдено
           </h2>
           <p class="no-results__fail-subheading">
             К сожалению по вашему запросу ничего не найдено.
           </p>
-        </div>        
+        </div> 
+        <h2 class="no-results__error no-results__error_hidden">
+          Ошибка поиска
+        </h2>       
       </section>
 
-      <section class="search-result cut-section">
+      <section class="search-result cut-section search-result_hidden">
         <div class="search-result__text-container">
           <h2 class="search-result__heading">
             Результаты поиска
           </h2>
-          <a href="./stats.html" class="search-result__link link">
-            Посмотреть аналитику <img src="26ea50ccdc2e435c7986960e1c09e2e5.svg" alt="Стрелка вправо" class="search-result__arrow">
+          <a href="./analytics.html" class="search-result__link link">
+            Посмотреть аналитику <img src="./images/arrow.svg" alt="Стрелка вправо" class="search-result__arrow">
           </a>
         </div>
         <div class="search-result__cards">
-          <div class="news-card">
-            <img src="2d3c4fb63a62527a86b28d14df424294.png" alt="Изображение к новости" class="news-card__image">
-            <div class="news-card__text-content">
-              <p class="news-card__date">
-                2 августа, 2019
-              </p>
-              <h3 class="news-card__heading">
-                Национальное достояние – парки
-              </h3>
-              <p class="news-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="news-card__source">
-                Лента.ру
-              </p>
-            </div>            
-          </div>
-          <div class="news-card">
-            <img src="4a1f0915b0758d10af5d2d97df0dece5.png" alt="Изображение к новости" class="news-card__image">
-            <div class="news-card__text-content">
-              <p class="news-card__date">
-                2 августа, 2019
-              </p>
-              <h3 class="news-card__heading">
-                Национальное достояние – парки
-              </h3>
-              <p class="news-card__text">
-                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
-              </p>
-              <p class="news-card__source">
-                Лента.ру
-              </p>
-            </div>            
-          </div>
-          <div class="news-card">
-            <img src="63a9d6d43ca0446182d7baf5f4ef9082.png" alt="Изображение к новости" class="news-card__image">
-            <div class="news-card__text-content">
-              <p class="news-card__date">
-                2 августа, 2019
-              </p>
-              <h3 class="news-card__heading">
-                Национальное достояние – парки
-              </h3>
-              <p class="news-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="news-card__source">
-                Лента.ру
-              </p>
-            </div>            
-          </div>
+            <!-- Пространство для добавления карточек новостей -->
         </div>
-        <button class="search-result__more-button">
+        <button class="search-result__more-button search-result__more-button_hidden">
           Показать еще
         </button>
       </section>
 
       <section class="about cut-section">
-        <img src="22d15052efca114f39a0ca8c7c46a581.jpg" alt="Фото автора" class="about__photo">
+        <img src="./images/author.jpg" alt="Фото автора" class="about__photo">
         <div class="about__text-container">
           <h2 class="about__heading">
             Об авторе
@@ -176,14 +129,14 @@
       </nav>
       <div class="footer__socials">
         <a href="https://github.com/dontstain" class="link" target="_blank">
-          <img src="95c33809db84803cc55e7643ea000913.svg" alt="Логотип GitHub" class="footer__icon">
+          <img src="./images/github.svg" alt="Логотип GitHub" class="footer__icon">
         </a>
         <a href="https://www.facebook.com/profile.php?id=100004625556968" class="link" target="_blank">
-          <img src="4521f6ae7ea044e9089e044d0cbb6ea7.svg" alt="Логотип Facebook" class="footer__icon">
+          <img src="./images/facebook.svg" alt="Логотип Facebook" class="footer__icon">
         </a>            
       </div>
     </footer>
   </div>
-  <script src="index.ab0dcde76bdc6234be7b.js"></script>
+  <script src="./scripts/index.2856cf8333532bae543b.js"></script>
 </body>
 </html>

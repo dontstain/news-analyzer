@@ -7,13 +7,13 @@ export class NewsCardList {
     this.counter = 0;
   }
 
-  addCard(articleObj) {
+  _addCard(articleObj) {
     const cardMarkup = this.card.create(articleObj);
 
     this.container.insertAdjacentHTML('beforeend', cardMarkup);
   }
   
-  determineButton() {
+  _determineButton() {
     const moreButton = document.querySelector('.search-result__more-button');
 
     if (this.counter < this.articlesAmount) {
@@ -28,10 +28,10 @@ export class NewsCardList {
   renderThree() {
     for (let i = 0; i < 3; i++) {
       if (this.counter < this.articlesAmount) {
-        this.addCard(this.articles[this.counter]);
+        this._addCard(this.articles[this.counter]);
         this.counter++;
       }
     }    
-    this.determineButton();
+    this._determineButton();
   }
 }

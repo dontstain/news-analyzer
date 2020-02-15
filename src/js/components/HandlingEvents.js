@@ -1,17 +1,14 @@
 import renderBlock from '../utils/render-block.js';
 import {RESULT, CARDS, NO_RESULT, LOADING, ERROR} from '../constants/blocks.js';
-import {NewsCard} from '../components/NewsCard.js';
 import {NewsCardList} from '../components/NewsCardList';
-import {DataStorage} from '../modules/DataStorage.js';
 import formQueryDate from '../utils/form-query-date.js';
 
-const newsCard = new NewsCard();
-const dataStorage = new DataStorage();
-let newsCardList;
-
 export class HandlingEvents {
-  constructor(api) {
+  constructor(api, newsCard, dataStorage) {
     this.api = api;
+    this.newsCard = newsCard;
+    this.dataStorage = dataStorage;
+    this.newsCardList = {};
     document.addEventListener('click', this);
     document.addEventListener('submit', this);
   }
@@ -30,12 +27,12 @@ export class HandlingEvents {
           .then(res => {
             if (res) {
               if (res.articles.length) {
-                newsCardList = new NewsCardList(CARDS, res.articles, newsCard); 
+                this.newsCardList = new NewsCardList(CARDS, res.articles, this.newsCard); 
 
-                newsCardList.renderThree();
+                this.newsCardList.renderThree();
                 renderBlock(RESULT);
-                dataStorage.save(query, 'query');
-                dataStorage.save(res, 'resObj');
+                this.dataStorage.save(query, 'query');
+                this.dataStorage.save(res, 'resObj');
               } else {
                 renderBlock(NO_RESULT);
               }
@@ -45,55 +42,55 @@ export class HandlingEvents {
           });
         this.api.getTitleMentions(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)))
           .then(res => {
-            dataStorage.save(res.totalResults, 'mentions');
+            this.dataStorage.save(res.totalResults, 'mentions');
           });
 
         this.api.getNews(query, formQueryDate(date), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountSeven');
+            this.dataStorage.save(res.totalResults, 'amountSeven');
           });
-        dataStorage.save(date, 'daySeven');
+        this.dataStorage.save(date, 'daySeven');
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountSix');
+            this.dataStorage.save(res.totalResults, 'amountSix');
           });
-        dataStorage.save(date, 'daySix');
+        this.dataStorage.save(date, 'daySix');
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountFive');
+            this.dataStorage.save(res.totalResults, 'amountFive');
           });
-        dataStorage.save(date, 'dayFive');
+        this.dataStorage.save(date, 'dayFive');
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountFour');
+            this.dataStorage.save(res.totalResults, 'amountFour');
           });
-        dataStorage.save(date, 'dayFour');
+        this.dataStorage.save(date, 'dayFour');
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountThree');
+            this.dataStorage.save(res.totalResults, 'amountThree');
           });
-        dataStorage.save(date, 'dayThree');
+        this.dataStorage.save(date, 'dayThree');
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountTwo');
+            this.dataStorage.save(res.totalResults, 'amountTwo');
           });
-        dataStorage.save(date, 'dayTwo');
+        this.dataStorage.save(date, 'dayTwo');
         
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 1)), formQueryDate(date))
           .then(res => {
-            dataStorage.save(res.totalResults, 'amountOne');
+            this.dataStorage.save(res.totalResults, 'amountOne');
           });
-        dataStorage.save(date, 'dayOne');
+        this.dataStorage.save(date, 'dayOne');
       }
     }
     else if (event.type === 'click') {
       if (event.target.classList.contains('search-result__more-button') && !event.target.classList.contains('search-result__more-button_hidden')) {
-        newsCardList.renderThree();
+        this.newsCardList.renderThree();
       }
     }
 

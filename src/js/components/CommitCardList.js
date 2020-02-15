@@ -5,7 +5,7 @@ export class CommitCardList {
     this.card = cardClass;
   }
 
-  addCard(commitObj) {
+  _addCard(commitObj) {
     const cardMarkup = this.card.create(commitObj);
 
     this.container.insertAdjacentHTML('beforeend', cardMarkup);
@@ -13,7 +13,7 @@ export class CommitCardList {
 
   render() {
     for (let i = 0; i < 20; i++) {
-      this.addCard(this.commits[i]);
+      this._addCard(this.commits[i]);
     }
   }
 }

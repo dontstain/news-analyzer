@@ -32,10 +32,10 @@ export class HandlingEvents {
               if (res.articles.length) {
                 newsCardList = new NewsCardList(CARDS, res.articles, newsCard); 
 
-                dataStorage.save(query, 'query');
-                dataStorage.save(res, 'resObj');
                 newsCardList.renderThree();
                 renderBlock(RESULT);
+                dataStorage.save(query, 'query');
+                dataStorage.save(res, 'resObj');
               } else {
                 renderBlock(NO_RESULT);
               }

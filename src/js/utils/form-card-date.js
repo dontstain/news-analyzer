@@ -38,8 +38,7 @@ function formCardDate (dateString) {
       break;
     case 11:
       month = 'декабря'
-      break;
-      
+      break;      
   }
   return `${date.getDate()} ${month}, ${date.getFullYear()}`
 }

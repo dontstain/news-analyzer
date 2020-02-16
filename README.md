@@ -1,6 +1,7 @@
 # News Analyzer
-Powered by NewsApi.org
 https://dontstain.github.io/news-analyzer
+
+Powered by NewsApi https://newsapi.org/
 
 Fully responsive multipaged Interactive webside searching for recent news based on user-input keywords.
 Using BEM-methodology file structure

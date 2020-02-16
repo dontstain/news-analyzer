@@ -8,29 +8,37 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: { 
-    index: './src/scripts/index.js',
-    about: './src/scripts/about.js',
-    stats: './src/scripts/stats.js'
+    index: './src/index.js',
+    about: './src/about/about.js',
+    analytics: './src/analytics/analytics.js'
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: './scripts/[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{
       test: /\.js$/, 
-      use: { loader: "babel-loader" }, 
+      use: { loader: 'babel-loader' }, 
       exclude: /node_modules/ 
     },
     {
       test: /\.css$/, 
-      use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 
-      'postcss-loader']
+      use: [
+        {
+          loader: (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
+          options: isDev ? {} : {
+            publicPath: '../'
+          },
+        },
+        'css-loader', 
+        'postcss-loader'
+      ]
     },
     {
       test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
             options: {
@@ -42,7 +50,7 @@ module.exports = {
      },
      {
       test: /\.(eot|ttf|woff|woff2)$/,
-      loader: 'file-loader?name=./vendor/[name].[ext]'
+      loader: 'file-loader?name=./fonts/[name].[ext]'
     }
   ]
   },
@@ -59,11 +67,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({ 
       inject: false,
-      template: './src/stats.html',
-      filename: 'stats.html'
+      template: './src/analytics.html',
+      filename: 'analytics.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: './styles/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

@@ -1,0 +1,12 @@
+@import url(./_hidden/no-results__error_hidden.css);
+
+.no-results__error {
+  margin: 60px 0 0;
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46x;
+  text-align: center;
+  color: #B6BCBF;
+}

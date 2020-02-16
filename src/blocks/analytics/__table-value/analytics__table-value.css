@@ -8,6 +8,7 @@
 
 
 .analytics__table-value {
+  min-width: fit-content;
   height: 19px;
   padding: 5px 6px 0;
   font-family: inherit;

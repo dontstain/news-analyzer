@@ -14,7 +14,7 @@
 @import url(./__card-img/commits__card-img.css);
 @import url(./__card-name/commits__card-name.css);
 @import url(./__card-text/commits__card-text.css);
-
+@import url(./__error/commits__error.css);
 
 .commits {
   display: grid;

@@ -1,5 +1,6 @@
 .news-card__image {
   width: 100%;
+  height: 18.8vw;
   max-height: 272px;
   object-fit: cover;
   margin-bottom: 20px;
@@ -8,5 +9,17 @@
 @media screen and (max-width: 900px) {
   .news-card__image {
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .news-card__image {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .news-card__image {
+    height: 61vw;
   }
 }

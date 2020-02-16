@@ -7,12 +7,11 @@ import {CommitCard} from '../js/components/CommitCard.js';
 
 const gitApi = new GithubApi();
 const commitCard = new CommitCard();
-let commitCardList;
 
 gitApi.getCommits()
   .then(commits => {
     if (commits) {
-      commitCardList = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits, commitCard);
+      const commitCardList = new CommitCardList(document.querySelector('.commits__slider-wrapper'), commits, commitCard);
       commitCardList.render(); 
     } 
     else {

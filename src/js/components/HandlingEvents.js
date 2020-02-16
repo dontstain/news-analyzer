@@ -15,7 +15,7 @@ export class HandlingEvents {
 
   handleEvent(event) {
     if (event.type === 'submit') {
-      let date = new Date();
+      const date = new Date();
 
       event.preventDefault();
 
@@ -40,7 +40,7 @@ export class HandlingEvents {
               renderBlock(ERROR);
             }
           });
-        this.api.getTitleMentions(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)))
+        this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)), true)
           .then(res => {
             this.dataStorage.save(res.totalResults, 'mentions');
           });

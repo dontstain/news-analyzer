@@ -5,6 +5,7 @@ export class NewsCardList {
     this.articlesAmount = this.articles.length
     this.card = cardClass;
     this.counter = 0;
+    this.moreButton = document.querySelector('.search-result__more-button');
   }
 
   _addCard(articleObj) {
@@ -14,13 +15,11 @@ export class NewsCardList {
   }
   
   _determineButton() {
-    const moreButton = document.querySelector('.search-result__more-button');
-
     if (this.counter < this.articlesAmount) {
-      moreButton.classList.remove('search-result__more-button_hidden')
+      this.moreButton.classList.remove('search-result__more-button_hidden')
     } else {
-      if (!moreButton.classList.contains('search-result__more-button_hidden')) {
-        moreButton.classList.add ('search-result__more-button_hidden')
+      if (!this.moreButton.classList.contains('search-result__more-button_hidden')) {
+        this.moreButton.classList.add ('search-result__more-button_hidden')
       }
     }
   }

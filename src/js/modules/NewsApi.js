@@ -1,32 +1,11 @@
-import {NEWS_API_KEY} from '../constants/news-api-key.js';
-
 export class NewsApi {
-  constructor() {    
-    this.apiKey = NEWS_API_KEY;    
+  constructor(apiKey) {    
+    this.apiKey = apiKey;    
   }
 
-  getNews(query, fromDate, toDate) {
+  getNews(query, fromDate, toDate, inTitle) {
     const request = new Request('https://newsapi.org/v2/everything?' +
-    `q=${query}&` +
-    `from=${fromDate}&` +
-    `to=${toDate}&` +
-    'sortBy=popularity&' +
-    'pageSize=100&' +
-    `apiKey=${this.apiKey}`);
-
-    return fetch(request)
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        }
-        return Promise.reject(`Ошибка: ${res.status}`)
-      })
-      .catch(err => console.log(err));
-  }
-
-  getTitleMentions(query, fromDate, toDate) {
-    const request = new Request('https://newsapi.org/v2/everything?' +
-    `qInTitle=${query}&` +
+    `${inTitle ? `qInTitle` : `q`}=${query}&` +
     `from=${fromDate}&` +
     `to=${toDate}&` +
     'sortBy=popularity&' +

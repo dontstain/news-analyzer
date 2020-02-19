@@ -89,16 +89,20 @@
       </section>
 
       <section class="about cut-section">
-        <img src="<%=require('./images/author.jpg').default%>" alt="Фото автора" class="about__photo">
+        <picture class="about__picture">
+          <source srcset="<%=require('./images/author-320.jpg').default%>" media="(max-width: 320px)">
+          <source srcset="<%=require('./images/author-768.jpg').default%>" media="(max-width: 768px)">
+          <img src="<%=require('./images/author.jpg').default%>" alt="Фото автора" class="about__photo">
+        </picture>
         <div class="about__text-container">
           <h2 class="about__heading">
             Об авторе
           </h2>
           <p class="about__text">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете. 
+            Меня зовут Дмитрий Трипольский, и я начинающий фронтенд-разработчик. Прежде чем начать серьезное изучение профессии, провел более 10 лет регулярно занимаясь “кодингом” на разных языках в школе и институте, параллельно с этим на любительском уровне изучая основы HTML и CSS.
           </p>
           <p class="about__text">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            На момент выполнения этой работы мой практический опыт, полученный в Яндекс.Практикуме, включает в себя: знание нативного JavaScript стандартов ES6+, ООП, адаптивная кроссбраузерная верстка, а также владение пакетом модулей Webpack и умение обращаться с Git-технологией. 
           </p>
         </div>
       </section>

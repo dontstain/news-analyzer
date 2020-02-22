@@ -5,6 +5,7 @@ export class NewsCardList {
     this.articlesAmount = this.articles.length
     this.card = cardClass;
     this.counter = 0;
+    this.renderNumber = 3;
     this.moreButton = document.querySelector('.search-result__more-button');
   }
 
@@ -24,8 +25,8 @@ export class NewsCardList {
     }
   }
 
-  renderThree() {
-    for (let i = 0; i < 3; i++) {
+  renderFew() {
+    for (let i = 0; i < this.renderNumber; i++) {
       if (this.counter < this.articlesAmount) {
         this._addCard(this.articles[this.counter]);
         this.counter++;

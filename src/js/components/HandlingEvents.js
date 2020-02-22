@@ -1,7 +1,8 @@
 import renderBlock from '../utils/render-block.js';
-import {RESULT, CARDS, NO_RESULT, LOADING, ERROR} from '../constants/blocks.js';
+import {RESULT, CARDS, NO_RESULT, LOADING, ERROR, INPUT} from '../constants/blocks.js';
 import {NewsCardList} from '../components/NewsCardList';
 import formQueryDate from '../utils/form-query-date.js';
+import toggleInputState from '../utils/toggle-input-state.js';
 
 export class HandlingEvents {
   constructor(api, newsCard, dataStorage) {
@@ -22,16 +23,17 @@ export class HandlingEvents {
       CARDS.innerHTML = '';
       if (event.target.classList.contains('search__form')) {
         const query = document.querySelector('.search__input').value;
+        toggleInputState(INPUT);
         renderBlock(LOADING);
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)))
-          .then(res => {
-            if (res.articles.length) {
-              this.newsCardList = new NewsCardList(CARDS, res.articles, this.newsCard); 
+          .then(response => {
+            if (response.articles.length) {
+              this.newsCardList = new NewsCardList(CARDS, response.articles, this.newsCard); 
 
-              this.newsCardList.renderThree();
+              this.newsCardList.renderFew();
               renderBlock(RESULT);
               this.dataStorage.save(query, 'query');
-              this.dataStorage.save(res, 'resObj');
+              this.dataStorage.save(response, 'responseObj');
             } else {
               renderBlock(NO_RESULT);
             }
@@ -39,7 +41,11 @@ export class HandlingEvents {
           .catch(err => {
             renderBlock(ERROR);
             console.log(err);
+          })
+          .finally(res => {
+            toggleInputState(INPUT);
           });
+
 
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)), true)
           .then(res => {
@@ -99,7 +105,7 @@ export class HandlingEvents {
     }
     else if (event.type === 'click') {
       if (event.target.classList.contains('search-result__more-button') && !event.target.classList.contains('search-result__more-button_hidden')) {
-        this.newsCardList.renderThree();
+        this.newsCardList.renderFew();
       }
     }
 

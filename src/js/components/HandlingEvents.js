@@ -2,7 +2,6 @@ import renderBlock from '../utils/render-block.js';
 import {RESULT, CARDS, NO_RESULT, LOADING, ERROR, INPUT} from '../constants/blocks.js';
 import {NewsCardList} from '../components/NewsCardList';
 import formQueryDate from '../utils/form-query-date.js';
-import toggleInputState from '../utils/toggle-input-state.js';
 
 export class HandlingEvents {
   constructor(api, newsCard, dataStorage) {
@@ -23,7 +22,7 @@ export class HandlingEvents {
       CARDS.innerHTML = '';
       if (event.target.classList.contains('search__form')) {
         const query = document.querySelector('.search__input').value;
-        toggleInputState(INPUT);
+        INPUT.toggleAttribute('disabled');
         renderBlock(LOADING);
         this.api.getNews(query, formQueryDate(date.setDate(date.getDate() - 6)), formQueryDate(date.setDate(date.getDate() + 6)))
           .then(response => {
@@ -43,7 +42,7 @@ export class HandlingEvents {
             console.log(err);
           })
           .finally(res => {
-            toggleInputState(INPUT);
+            INPUT.toggleAttribute('disabled');
           });
 
 

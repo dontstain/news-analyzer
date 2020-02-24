@@ -13,7 +13,7 @@ export class CommitCard {
         <p class="commits__card-date">
           ${formCardDate(this.commitInfo.commit.committer.date)}
         </p>
-        <img src="${this.commitInfo.author? this.commitInfo.author.avatar_url : `https://avatars1.githubusercontent.com/u/22224322?v=4`}" alt="Аватар" class="commits__card-img">
+        <img src="${this.commitInfo.author.avatar_url}" alt="Аватар" class="commits__card-img">
         <div class="commits__card-header">
           <h3 class="commits__card-name">
             ${this.commitInfo.commit.author.name}

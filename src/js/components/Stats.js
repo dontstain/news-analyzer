@@ -5,8 +5,8 @@ export class Stats {
   constructor(dataStorage) {
     this.dataStorage = dataStorage;
     this.query = dataStorage.load('query');
-    this.resObj = dataStorage.load('resObj');
-    this.total = this.resObj.totalResults;
+    this.response = dataStorage.load('responseObj');
+    this.total = this.response.totalResults;
   }
 
   _readStorage(numberStr) {
